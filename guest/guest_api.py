@@ -20,7 +20,10 @@ async def register_user_api(user_phone_number: int, user_name: str, password: st
 @guest.post('/login')
 async def login_user_api(user_email: str, password: str):
     result = check_password_db(user_email=user_email, password=password)
-    return {'status': 1, "message": result}
+    if isinstance(result, int):
+        return {'status': 1, "user_id": result}
+    else:
+        return {'status': 1, "message": result}
 
 
 @guest.delete('/delete-user')
