@@ -1,10 +1,8 @@
 import requests
-from aiogram import Dispatcher, Bot, executor
+from aiogram import Dispatcher, Bot
 from aiogram.contrib.fsm_storage.memory import MemoryStorage
-from aiogram.types import ReplyKeyboardRemove
 
 import states
-from states import *
 import buttons
 import database
 
