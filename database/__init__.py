@@ -3,7 +3,7 @@ from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 
-SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:525643916096@localhost:5432/hotel'
+SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://postgres:gomer@localhost:5432/hotel'
 
 engine = create_engine(SQLALCHEMY_DATABASE_URI, pool_size=20, max_overflow=10)
 
